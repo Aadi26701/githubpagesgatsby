@@ -1,0 +1,140 @@
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+  to {
+    box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+  }
+}
+.hotelsTagline {
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 48px;
+  display: inline-block;
+  width: 1280px;
+}
+.recommended {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  color: var(--color-cornflowerblue-200);
+  text-align: center;
+}
+.filterOption {
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  padding: var(--padding-2xs) var(--padding-2xl);
+  background-color: var(--color-white);
+  border-radius: var(--br-8xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.price {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+}
+.filterOption1,
+.filterOption2 {
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  padding: var(--padding-2xs) var(--padding-2xl);
+  background-color: transparent;
+  border-radius: var(--br-8xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.filterOption2:hover {
+  background-color: var(--color-white);
+  animation: 1s ease 0s infinite normal none shadow-inset-center;
+  opacity: 1;
+}
+.filterOptions,
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.title {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 1440px;
+  flex-direction: column;
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+}
+.banner,
+.header {
+  align-self: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.banner {
+  position: relative;
+  height: 193px;
+  flex-shrink: 0;
+  background-image: url(/banner@3x.png);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url(/header@3x.png);
+  text-align: left;
+  font-size: var(--font-size-23xl);
+  color: var(--color-white);
+  font-family: var(--font-baloo-bhai);
+}
+@media screen and (max-width: 1200px) {
+  .banner,
+  .title {
+    box-sizing: border-box;
+  }
+  .title {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-21xl);
+  }
+  .banner {
+    padding: var(--padding-2xl) var(--padding-21xl) var(--padding-2xl)
+      var(--padding-22xl);
+  }
+}
+@media screen and (max-width: 960px) {
+  .banner,
+  .title {
+    box-sizing: border-box;
+  }
+  .title {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+  }
+  .banner {
+    padding: var(--padding-2xl) var(--padding-5xl);
+  }
+}
+@media screen and (max-width: 420px) {
+  .hotelsTagline {
+    font-size: var(--font-size-13xl);
+  }
+  .price,
+  .recommended {
+    font-size: var(--font-size-sm);
+  }
+}
